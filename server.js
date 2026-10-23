@@ -12,7 +12,7 @@ app.use(express.json());
 app.get('/', (req, res) => res.json({ message: 'Finance Tracker API running' }));
 
 // Routes (added in Day 3-6)
-// app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
 // app.use('/api/transactions', require('./routes/transactionRoutes'));
 
 // Error handler
