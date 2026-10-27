@@ -52,7 +52,6 @@ exports.addTransaction = async (req, res) => {
   }
 };
 
-// DELETE /api/transactions/:id
 exports.deleteTransaction = async (req, res) => {
   try {
     const transaction = await Transaction.findOne({ _id: req.params.id, user: req.user._id });
