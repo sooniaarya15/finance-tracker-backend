@@ -15,7 +15,6 @@ app.get('/', (req, res) => res.json({ message: 'Finance Tracker API running' }))
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/transactions', require('./routes/transactionRoutes'));
 
-// Error handler
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(err.status || 500).json({ message: err.message || 'Server error' });
