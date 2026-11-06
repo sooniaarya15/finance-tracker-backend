@@ -1,6 +1,5 @@
 const Transaction = require('../models/Transaction');
 
-// GET /api/transactions?type=&category=&startDate=&endDate=
 exports.getTransactions = async (req, res) => {
   try {
     const { type, category, startDate, endDate } = req.query;
